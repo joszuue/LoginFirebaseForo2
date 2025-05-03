@@ -1,9 +1,12 @@
 # Foro 2: Login Firebase
 
-Ramos Jiménez, Jairo Dennis		   RJ172021
-Villegas Hernández, José Manuel		VH201183
-Vásquez Rodríguez, Denis Josué		VR222731
-Velásquez Rodríguez, Jorge Alberto	VR210280
+Ramos Jiménez, Jairo Dennis – RJ172021
+
+Villegas Hernández, José Manuel – VH201183
+
+Vásquez Rodríguez, Denis Josué – VR222731
+
+Velásquez Rodríguez, Jorge Alberto – VR210280
 
 
 # LoginFirebaseApp
