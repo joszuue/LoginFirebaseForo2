@@ -1,50 +1,56 @@
-# Welcome to your Expo app 👋
+# Foro 2: Login Firebase
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Ramos Jiménez, Jairo Dennis		   RJ172021
+Villegas Hernández, José Manuel		VH201183
+Vásquez Rodríguez, Denis Josué		VR222731
+Velásquez Rodríguez, Jorge Alberto	VR210280
 
-## Get started
 
-1. Install dependencies
+# LoginFirebaseApp
 
-   ```bash
-   npm install
-   ```
+Aplicación desarrollada con **React Native**, **Expo**, y **Firebase**, que permite a los usuarios iniciar sesión utilizando correo/contraseña o autenticación con Google.
 
-2. Start the app
+---
 
-   ```bash
-   npx expo start
-   ```
+## 📱 Funcionalidades
 
-In the output, you'll find options to open the app in a
+- Login con correo electrónico y contraseña (Firebase Auth)
+- Login con cuenta de Google (Google OAuth 2.0)
+- Redirección a pantalla de bienvenida después del login
+- Logout funcional
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+---
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## 📂 Estructura de archivos clave
 
-## Get a fresh project
+### `/screens/LoginScreen.js`
 
-When you're ready, run:
+Pantalla principal de autenticación:
 
-```bash
-npm run reset-project
-```
+- `signInWithEmailAndPassword` para login con correo.
+- `expo-auth-session` + `GoogleAuthProvider` para login con Google.
+- Redirección con `useRouter()` hacia `/home`.
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+---
 
-## Learn more
+### `/firebase.js`
 
-To learn more about developing your project with Expo, look at the following resources:
+Configuración de Firebase:
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+- Inicializa la app de Firebase.
+- Exporta `auth` para usarlo globalmente.
 
-## Join the community
+---
 
-Join our community of developers creating universal apps.
+### `/app/home.js` o `/app/home/index.js`
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Pantalla de bienvenida:
+
+- Muestra mensaje: `Bienvenido/a (correo electrónico)`.
+- Botón para cerrar sesión y redirigir a `/login`.
+
+---
+
+
+
+
